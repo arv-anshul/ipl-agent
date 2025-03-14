@@ -1,0 +1,7 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "ipl_agent": "ipl_agent.graph.graph:graph"
+  },
+  ".env": ".env"
+}
