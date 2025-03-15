@@ -19,7 +19,6 @@ class WorkflowState(TypedDict):
     # or remove it completely.
     messages: Annotated[list[str], add_messages]
     question: str
-    table_schema: str
     table_glimpse: str
     final_answer: str
     sql_query: str

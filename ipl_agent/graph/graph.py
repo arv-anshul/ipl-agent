@@ -12,7 +12,7 @@ def build_graph() -> StateGraph:
     )
 
     # nodes
-    builder.add_sequence([nodes.get_table_schema, nodes.get_table_glimpse])
+    builder.add_node(nodes.get_table_glimpse)
     builder.add_node(nodes.search_web)
     builder.add_node(nodes.generate_sql_query)
     builder.add_node(nodes.sql_query_executor)
@@ -25,7 +25,7 @@ def build_graph() -> StateGraph:
     builder.add_conditional_edges("sql_query_executor", edges.is_sql_result_fine)
 
     # entry and finish
-    builder.set_entry_point("get_table_schema")
+    builder.set_entry_point("get_table_glimpse")
     builder.set_finish_point("rephrase_answer")
 
     return builder

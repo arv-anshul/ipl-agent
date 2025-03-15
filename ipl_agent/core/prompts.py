@@ -1,10 +1,8 @@
 GENERATE_SQL_QUERY_TEMPLATE = """You are an expert in writting SQL query. Your task is to \
-write a SQL query that answers the question based on the table schema. The query should be
-a single line query that is executed against the table to get the result.
+write a SQL query that answers the question. The query should be a single line query that \
+is executed against the table to get the result.
 
 Table Name: {table_name}
-Table Schema:
-{table_schema}
 
 Table Glimpse:
 {table_glimpse}
@@ -19,9 +17,6 @@ SQL Query:
 IS_SQL_QUERY_POSSIBLE_TEMPLATE = """You are going to verify that whether the given \
 question can be answered using a SQL query or there is web_search tool required or is it
 normal conversation.
-
-Table schema:
-{table_schema}
 
 Table Glimpse:
 {table_glimpse}
